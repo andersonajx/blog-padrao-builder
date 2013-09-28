@@ -3,7 +3,12 @@ package br.com.andersonajx;
 public class Main {
 
 	public static void main(String[] args) {
-		Telefone telefone = new Telefone(55, 44, 99991111, 123, Telefone.TipoTelefone.RESIDENCIAL);
+		Telefone telefone = Telefone.builder().withCodigoPais(55)
+				.withDdd(44)
+				.withNumeroTelefone(99991111)
+				.withNumeroRamal(123)
+				.withTipoTelefone(Telefone.TipoTelefone.RESIDENCIAL).build();
+
 		System.out.println(telefone);
 	}
 
